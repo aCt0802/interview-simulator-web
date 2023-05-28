@@ -1,7 +1,10 @@
 import { FC } from "react"
 import React from "react"
+import { useNavigate } from "react-router-dom"
+
 
 export const Signin: FC = () => {
+    const navigate = useNavigate()
     return (
         <div className="flex h-full w-full items-center justify-center bg-backGround">
             <div className="h-3/5 w-1/4 overflow-hidden rounded-md bg-general">
@@ -26,8 +29,9 @@ export const Signin: FC = () => {
                     </button>
                 </div>
                 <div className="flex justify-center">
-                    <button className="hover:text-accent">
-                        create new account
+                    <button className="hover:text-accent"
+                        onClick={() => navigate("/signup")}>
+                        Create new account.
                     </button>
                 </ div>
             </div>
